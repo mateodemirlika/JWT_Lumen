@@ -33,8 +33,9 @@ class PostController extends Controller
     {
         try {
             $post = Post::findOrFail($id);
+            $post->categories;
             return response([
-                'data' => $post,
+                'data' =>$post,
                 'message' => 'Product Found'
             ],200);
         }
